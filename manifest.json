@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Path Lens",
+  "version": "0.1.0",
+  "description": "Lightweight JavaScript path and endpoint discovery for authorized reconnaissance.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "optional_host_permissions": [
+    "*://*/*"
+  ],
+  "icons": {
+    "48": "icons/path-lens.svg",
+    "96": "icons/path-lens.svg"
+  },
+  "action": {
+    "default_title": "Path Lens",
+    "default_icon": {
+      "16": "icons/path-lens.svg",
+      "32": "icons/path-lens.svg",
+      "64": "icons/path-lens.svg"
+    },
+    "default_popup": "popup.html"
+  }
+}

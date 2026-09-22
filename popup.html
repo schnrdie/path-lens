@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Path Lens</title>
+
+  <link rel="stylesheet" href="popup.css">
+
+  <script src="scanner.js"></script>
+  <script src="popup.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="title-row">
+      <h1>Path Lens</h1>
+      <span id="count" class="count">0</span>
+    </div>
+
+    <button
+      id="scan-button"
+      class="scan-button"
+      type="button"
+    >
+      Scan
+    </button>
+  </header>
+
+  <section
+    id="controls"
+    class="controls"
+    hidden
+  >
+    <div class="toolbar">
+      <input
+        id="search"
+        class="search"
+        type="search"
+        placeholder="Search paths..."
+        autocomplete="off"
+        spellcheck="false"
+      >
+
+      <button
+        id="filter-button"
+        class="filter-button"
+        type="button"
+      >
+        Filter
+      </button>
+    </div>
+
+    <div
+      id="filter-menu"
+      class="filter-menu"
+      hidden
+    >
+      <div class="filter-section">
+        <div class="filter-title">
+          Type
+        </div>
+
+        <label class="filter-checkbox">
+          <input
+            type="checkbox"
+            data-filter-type="type"
+            data-filter-value="path"
+            checked
+          >
+          <span>Path</span>
+        </label>
+
+        <label class="filter-checkbox">
+          <input
+            type="checkbox"
+            data-filter-type="type"
+            data-filter-value="url"
+          >
+          <span>URL</span>
+        </label>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-title">
+          Parameters
+        </div>
+
+        <label class="filter-checkbox">
+          <input
+            type="checkbox"
+            data-filter-type="params"
+            data-filter-value="with"
+          >
+          <span>With params</span>
+        </label>
+
+        <label class="filter-checkbox">
+          <input
+            type="checkbox"
+            data-filter-type="params"
+            data-filter-value="without"
+          >
+          <span>Without params</span>
+        </label>
+      </div>
+
+      <div
+        id="origin-filter-section"
+        class="filter-section"
+      >
+        <div class="filter-title">
+          Origin
+        </div>
+
+        <label class="filter-checkbox">
+          <input
+            type="checkbox"
+            data-filter-type="origin"
+            data-filter-value="first-party"
+          >
+          <span>First-party</span>
+        </label>
+
+        <label class="filter-checkbox">
+          <input
+            type="checkbox"
+            data-filter-type="origin"
+            data-filter-value="third-party"
+          >
+          <span>Third-party</span>
+        </label>
+
+        <label class="filter-checkbox">
+          <input
+            type="checkbox"
+            data-filter-type="origin"
+            data-filter-value="unknown"
+          >
+          <span>Unknown</span>
+        </label>
+      </div>
+
+      <div
+        id="status-filter-section"
+        class="filter-section"
+        hidden
+      >
+        <div class="filter-title">
+          Status
+        </div>
+
+        <div id="status-filter-options"></div>
+      </div>
+
+      <button
+        id="clear-filters"
+        class="clear-filters"
+        type="button"
+      >
+        Clear filters
+      </button>
+    </div>
+
+    <button
+      id="check-all"
+      class="copy-all"
+      type="button"
+    >
+      Check all
+    </button>
+
+    <button
+      id="copy-all"
+      class="copy-all"
+      type="button"
+    >
+      Copy all
+    </button>
+  </section>
+
+  <main
+    id="results"
+    class="results"
+  ></main>
+
+  <footer
+    id="status"
+    class="status"
+  >
+    No scan yet.
+  </footer>
+</body>
+</html>
