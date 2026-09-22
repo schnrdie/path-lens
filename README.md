@@ -122,4 +122,4 @@ The project currently prioritizes a small, understandable codebase and explicit 
 
 ## License
 
-License: **TBD**.
+Path Lens is licensed under the [MIT License](LICENSE).
